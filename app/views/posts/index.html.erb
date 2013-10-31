@@ -5,7 +5,11 @@
      The content goes in a p tag. -->
      
 <% @posts.each do |post| %>
-  <h3><%= post.title %></h3>
+  <h3><%= link_to post.title, post %></h3>
   <p><%= post.created_at %></p>
   <p><%= post.content %></p>
 <% end %>
+
+<p>
+  <%= link_to 'Create New Blog Post', new_post_path %>
+</p>

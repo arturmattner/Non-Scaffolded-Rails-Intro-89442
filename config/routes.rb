@@ -12,11 +12,11 @@ NonScaffoldedRails::Application.routes.draw do
   match 'posts' => 'posts#index', :as => 'posts', :via => :get
   # URL /posts will map to the index action of the posts controller.
 
-  match 'posts/:id' => 'posts#show', :as => 'post', :via => :get
-  # URL /posts/:id will map to the show action of the posts controller.
-
   match 'posts/new' => 'posts#new', :as => 'new_post', :via => :get
   # URL /posts/new will map to the new action of the posts controller.
+
+  match 'posts/:id' => 'posts#show', :as => 'post', :via => :get
+  # URL /posts/:id will map to the show action of the posts controller.
 
   match 'posts' => 'posts#create', :as => 'create_post', :via => :post
   # URL /posts will map to the create action of the posts controller.
