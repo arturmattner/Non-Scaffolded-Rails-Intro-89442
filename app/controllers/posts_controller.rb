@@ -9,4 +9,7 @@ class PostsController < ApplicationController
   end
   # After this index action executes Rails will
   # load the app/views/posts/index.html.erb
+  def show
+  	@posts = Post.find(params[:id])
+  end #auto load the app/views/posts/show.html.erb
 end
